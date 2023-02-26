@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../../components/Button";
 import Skeleton from "../../../components/Skeleton/Skeleton";
 import iconBuilding from "../../../images/property details page/icon-building.png";
 import iconLocationBlack from "../../../images/property details page/icon-location-black.png";
@@ -8,7 +9,7 @@ const SinglePropertyDescription = () => {
     <section className="py-12">
       <Skeleton>
         <div className="basis-2/3 pr-16">
-          <h1 className="font-robotoCondensed font-medium text-[2.5rem]">
+          <h1 className="font-robotoCondensed font-medium text-brand text-[2.5rem]">
             Fairway Villas
           </h1>
           <img src={iconBuilding} alt="building" />
@@ -33,7 +34,11 @@ const SinglePropertyDescription = () => {
             access to Al Maktoum International Airport as well as several of
             Dubai’s most well-known attractions and commercial districts.
           </p>
-          <div></div>
+          <div className="flex flex-wrap my-10">
+            <div className="basis-1/2">
+              <Button btnText="Download Brochure" />
+            </div>
+          </div>
         </div>
       </Skeleton>
     </section>

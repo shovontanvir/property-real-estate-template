@@ -10,6 +10,9 @@ module.exports = {
         robotoCondensed: ['Roboto Condensed', 'sans-serif'],
         vidaloka: ['Vidaloka', 'serif'],
       },
+      colors: {
+        'brand': '#283646',
+      },
       extend: {},
     },
     plugins: [],

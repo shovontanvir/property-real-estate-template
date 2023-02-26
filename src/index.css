@@ -15,7 +15,7 @@
   box-sizing: border-box; /* 1 */
   border-width: 0; /* 2 */
   border-style: solid; /* 2 */
-  border-color: #e5e7eb; /* 2 */
+  border-color: currentColor; /* 2 */
 }
 
 ::before,
@@ -467,32 +467,16 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.my-2{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+.my-5{
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
-.my-3{
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-.my-4{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.mr-3{
-  margin-right: 0.75rem;
-}
-.mr-2{
-  margin-right: 0.5rem;
+.my-10{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 .mr-1{
   margin-right: 0.25rem;
-}
-.mt-3{
-  margin-top: 0.75rem;
-}
-.mt-2{
-  margin-top: 0.5rem;
 }
 .flex{
   display: flex;
@@ -506,19 +490,28 @@ video {
 .w-screen{
   width: 100vw;
 }
+.basis-1\/2{
+  flex-basis: 50%;
+}
 .basis-2\/3{
   flex-basis: 66.666667%;
 }
 .flex-wrap{
   flex-wrap: wrap;
 }
+.rounded{
+  border-radius: 0.25rem;
+}
+.border{
+  border-width: 1px;
+}
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
 .px-96{
   padding-left: 24rem;
   padding-right: 24rem;
-}
-.py-10{
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
 }
 .py-12{
   padding-top: 3rem;
@@ -528,26 +521,28 @@ video {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.pr-5{
-  padding-right: 1.25rem;
-}
-.pr-10{
-  padding-right: 2.5rem;
-}
-.pr-12{
-  padding-right: 3rem;
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 .pr-16{
   padding-right: 4rem;
 }
-.font-robotoCondensed{
-  font-family: Roboto Condensed, sans-serif;
-}
 .font-montserrat{
   font-family: Montserrat, sans-serif;
 }
+.font-roboto{
+  font-family: Roboto, sans-serif;
+}
+.font-robotoCondensed{
+  font-family: Roboto Condensed, sans-serif;
+}
 .text-\[2\.5rem\]{
   font-size: 2.5rem;
+}
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 .text-sm{
   font-size: 0.875rem;
@@ -556,11 +551,14 @@ video {
 .font-medium{
   font-weight: 500;
 }
-.leading-7{
-  line-height: 1.75rem;
+.uppercase{
+  text-transform: uppercase;
 }
 .leading-4{
   line-height: 1rem;
+}
+.leading-7{
+  line-height: 1.75rem;
 }
 .text-\[\#242424\]{
   --tw-text-opacity: 1;
@@ -569,4 +567,8 @@ video {
 .text-\[\#535353\]{
   --tw-text-opacity: 1;
   color: rgb(83 83 83 / var(--tw-text-opacity));
+}
+.text-brand{
+  --tw-text-opacity: 1;
+  color: rgb(40 54 70 / var(--tw-text-opacity));
 }
