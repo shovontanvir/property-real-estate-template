@@ -3,6 +3,7 @@ module.exports = {
       "./src/**/*.{js,jsx,ts,tsx}",
     ],
     theme: {
+      extend: {
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
         oswald: ['Oswald', 'sans-serif'],
@@ -13,7 +14,7 @@ module.exports = {
       colors: {
         'brand': '#283646',
       },
-      extend: {},
+    },
     },
     plugins: [],
   }

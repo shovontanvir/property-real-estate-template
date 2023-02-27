@@ -3,12 +3,13 @@ import Button from "../../../components/Button";
 import Skeleton from "../../../components/Skeleton/Skeleton";
 import iconBuilding from "../../../images/property details page/icon-building.png";
 import iconLocationBlack from "../../../images/property details page/icon-location-black.png";
+import iconDownload from "../../../images/global/icon-download-outline-black.png";
 
 const SinglePropertyDescription = () => {
   return (
-    <section className="py-12">
-      <Skeleton>
-        <div className="basis-2/3 pr-16">
+    <section>
+      <Skeleton className="flex-col md:flex-row">
+        <div className="xl:basis-2/3 xl:pr-16 text-justify lg:text-left">
           <h1 className="font-robotoCondensed font-medium text-brand text-[2.5rem]">
             Fairway Villas
           </h1>
@@ -34,9 +35,18 @@ const SinglePropertyDescription = () => {
             access to Al Maktoum International Airport as well as several of
             Dubai’s most well-known attractions and commercial districts.
           </p>
-          <div className="flex flex-wrap my-10">
-            <div className="basis-1/2">
-              <Button btnText="Download Brochure" />
+          <div className="flex flex-wrap my-8">
+            <div className="w-full xl:pr-4 py-3 xl:basis-1/2">
+              <Button btnText="Download Brochure" btnIcon={iconDownload} />
+            </div>
+            <div className="w-full xl:pl-4 py-3 xl:basis-1/2">
+              <Button btnText="Download Floor Plan" btnIcon={iconDownload} />
+            </div>
+            <div className="w-full xl:pr-4 py-3 xl:basis-1/2">
+              <Button btnText="view gallery" btnIcon={iconDownload} />
+            </div>
+            <div className="w-full xl:pl-4 py-3 xl:basis-1/2">
+              <Button btnText="location" btnIcon={iconDownload} />
             </div>
           </div>
         </div>
