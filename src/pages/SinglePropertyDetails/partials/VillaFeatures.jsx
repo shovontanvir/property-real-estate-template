@@ -7,7 +7,7 @@ import type from "../../../images/property details page/icon-building-red.png";
 import location from "../../../images/property details page/icon-location.png";
 import bedrooms from "../../../images/property details page/icon-bedroom.png";
 
-const VillaFeatures = () => {
+const VillaFeatures = (props) => {
   return (
     <section className="mb-8">
       <Skeleton>

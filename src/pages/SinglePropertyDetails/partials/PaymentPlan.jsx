@@ -3,7 +3,9 @@ import Skeleton from "../../../components/Skeleton/Skeleton";
 import HeadingText from "./HeadingText";
 import PaymentItem from "./PaymentItem";
 
-const PaymentPlan = () => {
+const PaymentPlan = (props) => {
+  // const paymentPlan = props.paymentPlan;
+
   return (
     <section className="mb-5">
       <Skeleton>

@@ -1,11 +1,12 @@
 import React from "react";
-import propertyBanner from "../../../images/property details page/property-banner.png";
 
-const SinglePropertyHeader = () => {
+const SinglePropertyHeader = (props) => {
+  const header = props.header;
+
   return (
     <section className="h-[75vh]">
       <img
-        src={propertyBanner}
+        src={header}
         alt="Single Property Banner"
         className="h-full w-screen"
       />
