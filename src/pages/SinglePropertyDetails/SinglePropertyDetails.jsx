@@ -1,7 +1,10 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { getApiData } from "../../Services/apiFunctions";
+import Amenities from "./partials/Amenities";
+import Downloads from "./partials/Downloads";
 import Highlights from "./partials/Highlights";
+import Nearby from "./partials/Nearby";
 import PaymentPlan from "./partials/PaymentPlan";
 import PropertyVideo from "./partials/PropertyVideo";
 import SinglePropertyDescription from "./partials/SinglePropertyDescription";
@@ -37,6 +40,9 @@ const SinglePropertyDetails = (props) => {
       <Highlights highlights={singleProperty.highlights} />
       <PaymentPlan />
       <PropertyVideo />
+      <Amenities amenities={singleProperty.amenities} />
+      <Nearby nearby={singleProperty.location} />
+      <Downloads />
     </>
   );
 };

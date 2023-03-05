@@ -18,11 +18,11 @@ const SinglePropertyDescription = (props) => {
           <h1 className="font-robotoCondensed font-medium text-brand text-[2.5rem]">
             {propertyDetails.propertyName}
           </h1>
-          <img src={iconBuilding} alt="building" />
-          <p className="font-montserrat text-[#535353] text-sm leading-4">
+          <p className="font-montserrat text-[#535353] text-sm leading-4 flex my-2">
+            <img src={iconBuilding} alt="building" className="mr-1" />
             {propertyDetails.developerType.name}
           </p>
-          <p className="font-montserrat text-[#535353] text-sm leading-4 flex">
+          <p className="font-montserrat text-[#535353] text-sm leading-4 flex my-2">
             <img src={iconLocationBlack} alt="Location" className="mr-1" />{" "}
             {propertyDetails.propertyArea.areaName}
           </p>
