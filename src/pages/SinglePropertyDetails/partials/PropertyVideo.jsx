@@ -1,22 +1,16 @@
 import React from "react";
 import Skeleton from "../../../components/Skeleton/Skeleton";
 import HeadingText from "./HeadingText";
-import { Player, BigPlayButton } from "video-react";
+import ReactPlayer from "react-player/youtube";
 
-import "../../../../node_modules/video-react/dist/video-react.css";
-
-const PropertyVideo = () => {
+const PropertyVideo = (props) => {
   return (
     <section>
       <Skeleton>
         <HeadingText innerText="Video" />
-        <Player
-          playsInline
-          poster="images/property-gallery-1.png"
-          src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-        >
-          <BigPlayButton position="center" />
-        </Player>
+        <div className="w-full flex justify-center aspect-video">
+          <ReactPlayer url={props.url} width="100%" height="100%" />
+        </div>
       </Skeleton>
     </section>
   );

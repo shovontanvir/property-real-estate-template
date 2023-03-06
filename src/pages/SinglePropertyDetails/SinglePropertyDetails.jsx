@@ -6,6 +6,7 @@ import Downloads from "./partials/Downloads";
 import Highlights from "./partials/Highlights";
 import Nearby from "./partials/Nearby";
 import PaymentPlan from "./partials/PaymentPlan";
+import PhotoGallery from "./partials/PhotoGallery";
 import PropertyVideo from "./partials/PropertyVideo";
 import SinglePropertyDescription from "./partials/SinglePropertyDescription";
 import SinglePropertyHeader from "./partials/SinglePropertyHeader";
@@ -36,10 +37,11 @@ const SinglePropertyDetails = (props) => {
       <SinglePropertyHeader header={singleProperty.images[0].path} />
       <div className="my-12"></div>
       <SinglePropertyDescription property={singleProperty} />
-      <VillaFeatures />
+      <VillaFeatures villa={singleProperty} />
       <Highlights highlights={singleProperty.highlights} />
-      <PaymentPlan />
-      <PropertyVideo />
+      <PaymentPlan paymentPlan={singleProperty.paymentPlan} />
+      <PhotoGallery images={singleProperty.images} />
+      <PropertyVideo url={singleProperty.videos[0].path} />
       <Amenities amenities={singleProperty.amenities} />
       <Nearby nearby={singleProperty.location} />
       <Downloads />

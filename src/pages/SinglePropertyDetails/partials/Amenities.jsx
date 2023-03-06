@@ -11,7 +11,7 @@ const Amenities = (props) => {
   const features2 = [];
 
   features.map((item, index) =>
-    index + 1 <= features.length / 2
+    index + 1 <= Math.ceil(features.length / 2)
       ? features1.push(item)
       : features2.push(item)
   );
@@ -24,7 +24,7 @@ const Amenities = (props) => {
           {amenities.description}
         </p>
         <div className="flex flex-wrap w-full justify-around">
-          <ul className="text-left">
+          <ul className="text-left w-full lg:w-auto pl-8 sm:pl-12 lg:pl-0">
             {features1.map((item, index) => (
               <li
                 className="flex items-center leading-8"
@@ -39,7 +39,7 @@ const Amenities = (props) => {
               </li>
             ))}
           </ul>
-          <ul className="text-left">
+          <ul className="text-left w-full lg:w-auto pl-8 sm:pl-12 lg:pl-0">
             {features2.map((item, index) => (
               <li
                 className="flex items-center leading-8"

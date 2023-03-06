@@ -14,11 +14,14 @@ const Nearby = (props) => {
         <p className="font-montserrat text-[#242424] leading-7 py-2">
           {nearby.locDescription}
         </p>
-        <div className="flex flex-wrap w-full justify-between items-center mt-10">
-          <NearbyItem image={iconAeroplane} title="Al Maktoum Airport" />
-          <NearbyItem image={iconAeroplane} title="Al Maktoum Airport" />
-          <NearbyItem image={iconAeroplane} title="Al Maktoum Airport" />
-          <NearbyItem image={iconAeroplane} title="Al Maktoum Airport" />
+        <div className="flex flex-wrap w-full justify-center items-start mt-10">
+          {nearby.nearby.map((item, index) => (
+            <NearbyItem
+              image={iconAeroplane}
+              title={item.title}
+              key={`nearbyPlaces-${index}`}
+            />
+          ))}
         </div>
       </Skeleton>
     </section>

@@ -4,6 +4,7 @@ import Skeleton from "../../../components/Skeleton/Skeleton";
 import iconBuilding from "../../../images/property details page/icon-building.png";
 import iconLocationBlack from "../../../images/property details page/icon-location-black.png";
 import iconDownload from "../../../images/global/icon-download-outline-black.png";
+import RegisterForm from "./RegisterForm";
 
 const SinglePropertyDescription = (props) => {
   const propertyDetails = props.property;
@@ -35,21 +36,22 @@ const SinglePropertyDescription = (props) => {
             </p>
           ))}
 
-          <div className="flex flex-wrap my-8">
-            <div className="w-full xl:pr-4 py-3 xl:basis-1/2">
+          <div className="flex flex-wrap mt-8">
+            <div className="w-full xl:pr-4 pt-3 xl:basis-1/2">
               <Button btnText="Download Brochure" btnIcon={iconDownload} />
             </div>
-            <div className="w-full xl:pl-4 py-3 xl:basis-1/2">
+            <div className="w-full xl:pl-4 pt-3 xl:basis-1/2">
               <Button btnText="Download Floor Plan" btnIcon={iconDownload} />
             </div>
-            <div className="w-full xl:pr-4 py-3 xl:basis-1/2">
+            <div className="w-full xl:pr-4 pt-3 xl:basis-1/2">
               <Button btnText="view gallery" btnIcon={iconDownload} />
             </div>
-            <div className="w-full xl:pl-4 py-3 xl:basis-1/2">
+            <div className="w-full xl:pl-4 pt-3 xl:basis-1/2">
               <Button btnText="location" btnIcon={iconDownload} />
             </div>
           </div>
         </div>
+        <RegisterForm propertyName={propertyDetails.propertyName} />
       </Skeleton>
     </section>
   );

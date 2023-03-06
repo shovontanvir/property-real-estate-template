@@ -4,7 +4,7 @@ const SinglePropertyHeader = (props) => {
   const header = props.header;
 
   return (
-    <section className="h-[75vh]">
+    <section className="h-[75vh] w-screen">
       <img
         src={header}
         alt="Single Property Banner"

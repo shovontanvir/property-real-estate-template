@@ -4,19 +4,31 @@ import HeadingText from "./HeadingText";
 import PaymentItem from "./PaymentItem";
 
 const PaymentPlan = (props) => {
-  // const paymentPlan = props.paymentPlan;
+  const paymentPlan = props.paymentPlan;
 
   return (
     <section className="mb-5">
       <Skeleton>
         <HeadingText innerText="Payment Plan" />
-        <div className="w-full relative">
-          <div className="border border-dashed w-[90%] mx-auto absolute top-9 translate-x-9 -z-50"></div>
+        <div className="w-full relative overflow-clip">
+          <div className="w-full absolute top-9 left-1/2 -z-50">
+            <div className="border border-dashed w-[70%] mx-auto relative -left-1/2 -z-50"></div>
+          </div>
           <div className="flex justify-between w-full">
-            <PaymentItem title="80%" description="During Construction" />
-            <PaymentItem title="20%" description="Upon Handover" />
-            <PaymentItem title="2026" description="Handover" />
-            <PaymentItem title="aed 3m" description="Price Starting" />
+            {paymentPlan.map((item, index) => (
+              <div className="basis-1/2 text-center" key={`payment-${index}`}>
+                <PaymentItem
+                  title={
+                    item.percentage
+                      ? item.percentage
+                      : item.installment
+                      ? item.installment
+                      : item.date
+                  }
+                  description={item.milestone}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </Skeleton>

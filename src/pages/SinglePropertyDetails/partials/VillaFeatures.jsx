@@ -8,37 +8,38 @@ import location from "../../../images/property details page/icon-location.png";
 import bedrooms from "../../../images/property details page/icon-bedroom.png";
 
 const VillaFeatures = (props) => {
+  const villa = props.villa;
   return (
     <section className="mb-8">
       <Skeleton>
-        <HeadingText innerText="Fairway Villas" />
+        <HeadingText innerText={villa.propertyName} />
         <div className="flex flex-wrap w-full">
           <div className="lg:basis-1/2 flex flex-wrap w-full lg:pr-6">
             <FeatureItem
               featureImage={price}
               featureText="Starting Price"
-              featureDetails="Aed 3m"
+              featureDetails={villa.startingPrice}
             />
           </div>
           <div className="lg:basis-1/2 flex flex-wrap w-full lg:pl-6">
             <FeatureItem
               featureImage={type}
               featureText="Type"
-              featureDetails="Villas"
+              featureDetails={villa.propertyType.name}
             />
           </div>
           <div className="lg:basis-1/2 flex flex-wrap w-full lg:pr-6">
             <FeatureItem
               featureImage={location}
               featureText="Location"
-              featureDetails="Emaar South"
+              featureDetails={villa.propertyArea.areaName}
             />
           </div>
           <div className="lg:basis-1/2 flex flex-wrap w-full lg:pl-6">
             <FeatureItem
               featureImage={bedrooms}
               featureText="Bedrooms"
-              featureDetails="3, 4"
+              featureDetails={villa.unitType.size}
             />
           </div>
         </div>
