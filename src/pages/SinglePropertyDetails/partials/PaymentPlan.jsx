@@ -1,5 +1,5 @@
 import React from "react";
-import Skeleton from "../../../components/Skeleton/Skeleton";
+import SkeletonSingleProperty from "../../../components/Skeleton/SkeletonSingleProperty";
 import HeadingText from "./HeadingText";
 import PaymentItem from "./PaymentItem";
 
@@ -8,7 +8,7 @@ const PaymentPlan = (props) => {
 
   return (
     <section className="mb-5">
-      <Skeleton>
+      <SkeletonSingleProperty>
         <HeadingText innerText="Payment Plan" />
         <div className="w-full relative overflow-clip">
           <div className="w-full absolute top-9 left-1/2 -z-50">
@@ -31,7 +31,7 @@ const PaymentPlan = (props) => {
             ))}
           </div>
         </div>
-      </Skeleton>
+      </SkeletonSingleProperty>
     </section>
   );
 };

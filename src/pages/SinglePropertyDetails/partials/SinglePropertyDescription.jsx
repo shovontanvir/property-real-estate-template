@@ -1,10 +1,11 @@
 import React from "react";
 import Button from "../../../components/Button";
-import Skeleton from "../../../components/Skeleton/Skeleton";
+import SkeletonSingleProperty from "../../../components/Skeleton/SkeletonSingleProperty";
 import iconBuilding from "../../../images/property details page/icon-building.png";
 import iconLocationBlack from "../../../images/property details page/icon-location-black.png";
 import iconDownload from "../../../images/global/icon-download-outline-black.png";
 import RegisterForm from "./RegisterForm";
+import ButtonOutline from "../../../components/ButtonOutline";
 
 const SinglePropertyDescription = (props) => {
   const propertyDetails = props.property;
@@ -14,7 +15,7 @@ const SinglePropertyDescription = (props) => {
 
   return (
     <section>
-      <Skeleton className="flex-col md:flex-row">
+      <SkeletonSingleProperty className="flex-col md:flex-row">
         <div className="xl:basis-2/3 xl:pr-16 text-justify lg:text-left">
           <h1 className="font-robotoCondensed font-medium text-brand text-[2.5rem]">
             {propertyDetails.propertyName}
@@ -41,18 +42,21 @@ const SinglePropertyDescription = (props) => {
               <Button btnText="Download Brochure" btnIcon={iconDownload} />
             </div>
             <div className="w-full xl:pl-4 pt-3 xl:basis-1/2">
-              <Button btnText="Download Floor Plan" btnIcon={iconDownload} />
+              <ButtonOutline
+                btnText="Download Floor Plan"
+                btnIcon={iconDownload}
+              />
             </div>
             <div className="w-full xl:pr-4 pt-3 xl:basis-1/2">
-              <Button btnText="view gallery" btnIcon={iconDownload} />
+              <ButtonOutline btnText="view gallery" btnIcon={iconDownload} />
             </div>
             <div className="w-full xl:pl-4 pt-3 xl:basis-1/2">
-              <Button btnText="location" btnIcon={iconDownload} />
+              <ButtonOutline btnText="location" btnIcon={iconDownload} />
             </div>
           </div>
         </div>
         <RegisterForm propertyName={propertyDetails.propertyName} />
-      </Skeleton>
+      </SkeletonSingleProperty>
     </section>
   );
 };

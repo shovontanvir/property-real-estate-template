@@ -1,5 +1,5 @@
 import React from "react";
-import Skeleton from "../../../components/Skeleton/Skeleton";
+import SkeletonSingleProperty from "../../../components/Skeleton/SkeletonSingleProperty";
 import HeadingText from "./HeadingText";
 import Button from "../../../components/Button";
 import iconDownload from "../../../images/global/icon-download-outline-black.png";
@@ -7,7 +7,7 @@ import iconDownload from "../../../images/global/icon-download-outline-black.png
 const Downloads = () => {
   return (
     <section>
-      <Skeleton>
+      <SkeletonSingleProperty>
         <HeadingText innerText="Downloads" />
         <div className="flex justify-between w-[90%] mx-auto">
           <div className="w-full xl:pr-12 py-3 xl:basis-1/2">
@@ -17,7 +17,7 @@ const Downloads = () => {
             <Button btnText="Download Brochure" btnIcon={iconDownload} />
           </div>
         </div>
-      </Skeleton>
+      </SkeletonSingleProperty>
     </section>
   );
 };

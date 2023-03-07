@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import Skeleton from "../../../components/Skeleton/Skeleton";
+import SkeletonSingleProperty from "../../../components/Skeleton/SkeletonSingleProperty";
 import HeadingText from "./HeadingText";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -21,7 +21,7 @@ const PhotoGallery = (props) => {
   const [thumbsSwiper, setThumbsSwiper] = useState();
   return (
     <section>
-      <Skeleton className="justify-center">
+      <SkeletonSingleProperty className="justify-center">
         <HeadingText innerText="Photo Gallery" />
         <Swiper
           style={{
@@ -79,7 +79,7 @@ const PhotoGallery = (props) => {
             <img src={next} alt="next" />
           </button>
         </div>
-      </Skeleton>
+      </SkeletonSingleProperty>
     </section>
   );
 };

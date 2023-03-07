@@ -1,5 +1,5 @@
 import React from "react";
-import Skeleton from "../../../components/Skeleton/Skeleton";
+import SkeletonSingleProperty from "../../../components/Skeleton/SkeletonSingleProperty";
 import FeatureItem from "./FeatureItem";
 import HeadingText from "./HeadingText";
 import price from "../../../images/property details page/icon-cash-outline.png";
@@ -11,7 +11,7 @@ const VillaFeatures = (props) => {
   const villa = props.villa;
   return (
     <section className="mb-8">
-      <Skeleton>
+      <SkeletonSingleProperty>
         <HeadingText innerText={villa.propertyName} />
         <div className="flex flex-wrap w-full">
           <div className="lg:basis-1/2 flex flex-wrap w-full lg:pr-6">
@@ -43,7 +43,7 @@ const VillaFeatures = (props) => {
             />
           </div>
         </div>
-      </Skeleton>
+      </SkeletonSingleProperty>
     </section>
   );
 };

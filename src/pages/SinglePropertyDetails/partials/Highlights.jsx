@@ -1,5 +1,5 @@
 import React from "react";
-import Skeleton from "../../../components/Skeleton/Skeleton";
+import SkeletonSingleProperty from "../../../components/Skeleton/SkeletonSingleProperty";
 import HeadingText from "./HeadingText";
 import tick from "../../../images/property details page/icon-tick.png";
 
@@ -8,7 +8,7 @@ const Highlights = (props) => {
 
   return (
     <section className="mb-5">
-      <Skeleton>
+      <SkeletonSingleProperty>
         <HeadingText innerText="Highlights" />
         <div className="w-full flex justify-center">
           <ul>
@@ -27,7 +27,7 @@ const Highlights = (props) => {
             ))}
           </ul>
         </div>
-      </Skeleton>
+      </SkeletonSingleProperty>
     </section>
   );
 };

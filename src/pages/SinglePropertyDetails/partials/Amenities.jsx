@@ -1,5 +1,5 @@
 import React from "react";
-import Skeleton from "../../../components/Skeleton/Skeleton";
+import SkeletonSingleProperty from "../../../components/Skeleton/SkeletonSingleProperty";
 import HeadingText from "./HeadingText";
 import returnDownForward from "../../../images/property details page/icon-return-down-forward.png";
 
@@ -18,7 +18,7 @@ const Amenities = (props) => {
 
   return (
     <section>
-      <Skeleton className="justify-center text-center">
+      <SkeletonSingleProperty className="justify-center text-center">
         <HeadingText innerText="Amenities" />
         <p className="font-montserrat text-[#242424] leading-7 py-2">
           {amenities.description}
@@ -55,7 +55,7 @@ const Amenities = (props) => {
             ))}
           </ul>
         </div>
-      </Skeleton>
+      </SkeletonSingleProperty>
     </section>
   );
 };
