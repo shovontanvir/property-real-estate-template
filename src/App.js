@@ -3,8 +3,12 @@ import { QueryClientProvider, QueryClient} from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import Navbar from "./components/Navbar";
 
+
 function App() {
   const queryClient = new QueryClient();
+
+
+
 
   return (
     <QueryClientProvider client={queryClient}>

@@ -11,14 +11,17 @@ import PropertyVideo from "./partials/PropertyVideo";
 import SinglePropertyDescription from "./partials/SinglePropertyDescription";
 import SinglePropertyHeader from "./partials/SinglePropertyHeader";
 import VillaFeatures from "./partials/VillaFeatures";
+import { useStateValue } from "../../states/StateProvider";
 
 const SinglePropertyDetails = (props) => {
+  const [{ lang }] = useStateValue();
+
   const getSinglePropertyDetails = () => {
-    return getApiData(props.url);
+    return getApiData(lang, props.url);
   };
 
   const { isLoading, data, isError, error } = useQuery(
-    ["single-property-details", props.url],
+    ["single-property-details", lang],
     getSinglePropertyDetails
   );
 
@@ -34,7 +37,7 @@ const SinglePropertyDetails = (props) => {
 
   return (
     <>
-      <SinglePropertyHeader header={singleProperty.images[0].path} />
+      {/* <SinglePropertyHeader header={singleProperty.images[0].path} /> */}
       <div className="my-12"></div>
       <SinglePropertyDescription property={singleProperty} />
       <VillaFeatures villa={singleProperty} />

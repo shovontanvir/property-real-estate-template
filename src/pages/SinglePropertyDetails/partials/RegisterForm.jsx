@@ -31,7 +31,7 @@ const RegisterForm = (props) => {
     return error.message;
   }
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className="bg-[#F3FAFF] p-10 border border-[#373F48] rounded-md xl:basis-1/3 text-center">
@@ -65,9 +65,9 @@ const RegisterForm = (props) => {
             id="country"
             className="w-12 aspect-square -mt-3 mr-3 border p-2 border-[#A8A8A8] rounded-md"
           >
-            {data.map((country) => (
-              <option value="" dataThumbnails></option>
-            ))}
+            {/* {data.map((country) => (
+              <option value="" ></option>
+            ))} */}
           </select>
           <input
             type="tel"

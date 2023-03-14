@@ -2,11 +2,13 @@ import axios from "axios";
 
 const apiUrl = process.env.REACT_APP_API_URL;
 
+
 // function to get data from api using axios
-export const getApiData = (url) => {
+export const getApiData = (lang,url) => {
   return new Promise((resolve, reject) => {
+    console.log(`${apiUrl}/${lang}/${url}`);
     axios
-      .get(apiUrl + "/" + url )
+      .get(`${apiUrl}/${lang}/${url}`)
       .then((response) => {
         resolve(response.data);
       })

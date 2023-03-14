@@ -4,14 +4,17 @@ import logo from "../images/global/logo.png";
 import calender from "../images/global/icon-calendar-outline.png";
 import { useQuery } from "react-query";
 import { getApiData } from "../Services/apiFunctions";
+import { useStateValue } from "../states/StateProvider";
 
 const Navbar = () => {
+  const [{ lang }, dispatch] = useStateValue();
+
   const getAllProperty = () => {
-    return getApiData("property/1");
+    return getApiData(lang, "property/1");
   };
 
   const { isLoading, data, isError, error } = useQuery(
-    "all-property",
+    ["all-property"],
     getAllProperty
   );
 
@@ -22,6 +25,11 @@ const Navbar = () => {
   if (isError) {
     return error.message;
   }
+
+  const switchLang = (language) => {
+    dispatch({ type: "setLang", item: language });
+    console.log("language:", language, "language state: ", lang);
+  };
 
   const langList = data.data.langList;
 
@@ -53,10 +61,15 @@ const Navbar = () => {
             <h1 className="font-roboto text-lg uppercase">Arrange a Meeting</h1>
           </div>
           <div className="ml-10">
-            <select name="language" id="language">
-              <option value="">Select a language</option>
+            <select
+              name="language"
+              id="language"
+              onChange={(e) => switchLang(e.target.value)}
+            >
               {langList.map((lang) => (
-                <option value={lang.value}>{lang.title}</option>
+                <option value={lang.value} key={lang.value}>
+                  {lang.title}
+                </option>
               ))}
             </select>
           </div>
